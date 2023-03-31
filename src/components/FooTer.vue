@@ -6,7 +6,7 @@
         </div>
         <div class="cta">
             <p class="calltoaction">
-                je souhaite realiser un projet
+                je souhaite realiser un projet !
             </p>
         </div>
         <div class="copie">
