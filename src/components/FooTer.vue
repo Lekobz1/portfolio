@@ -1,6 +1,6 @@
 <template>
-<footer class="footer">
-    <div class="container">
+<footer class="container">
+    
         <div class="logo">
             <img class="imglogo" src="../assets/logo site.svg" alt="Logo Jonathan Simon">
         </div>
@@ -12,13 +12,14 @@
         <div class="copie">
 
         </div>
-    </div>
+    
 </footer>
 
 </template>
 
 <style scoped>
 .container { 
+    width: 100vw;
     background-color: rgba(249, 244, 237, 1);
     display: grid;
     grid-template-columns: 20% 60% 20%;
@@ -28,7 +29,7 @@
     grid-template-areas: "logo cta copie";
     position:absolute;
     bottom:0;
-    width: 100%;
+    
 }
 
 .logo { 
