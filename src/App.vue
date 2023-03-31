@@ -8,7 +8,7 @@ import NavBar from '@/components/NavBar.vue';
 <template>
   <header>
     <NavBar>
-de
+
     </NavBar>
   </header>
   
@@ -16,11 +16,11 @@ de
     <RouterView />
   
 
-  <footer>
+ 
     <Footer>
 
     </Footer>
-  </footer>
+  
 
   
 </template>
