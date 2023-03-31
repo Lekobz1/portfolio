@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 .nav {
-  height: 200px;
+  height: 150px;
   display: grid;
   grid-template-columns: 18% 58% 18%;
   grid-template-rows: 33% 33% 33%;
