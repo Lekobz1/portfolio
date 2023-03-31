@@ -5,12 +5,12 @@
 </template>
 
 <script>
-import FormulaireVue from '../components/Formulaire.vue';
+import Formulaire from '../components/Formulaire.vue';
 
   export default {
-    name: 'Formulaire',
+    name: 'Contact',
     components : {
-      FormulaireVue,
+      Formulaire,
     }
 }
 </script>

@@ -65,15 +65,11 @@ export default {
 
 }
 
-a,
-b,
-c,
-d,
-e,
-f {
+a, b, c, d, e, f {
   place-self: center;
   text-decoration: none;
   text-transform: uppercase;
+  color: #1E1E1E;
 }
 
 .logIn {
