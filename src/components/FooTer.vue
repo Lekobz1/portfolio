@@ -27,8 +27,7 @@
     gap: 0% 0%;
     grid-auto-flow: row;
     grid-template-areas: "logo cta copie";
-    position:absolute;
-    bottom:0;
+    
     
 }
 
