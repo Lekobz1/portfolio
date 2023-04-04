@@ -1,5 +1,8 @@
 <template>
-
+        
+    <div class="carousel">
+            
+    </div>
     
 </template>
 
@@ -7,7 +10,7 @@
 
 export default {
 
-    name : 'MenuPortfolio',
+    name : 'CarrouselPortfolio',
     components :{},
 }
 
