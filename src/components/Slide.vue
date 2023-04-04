@@ -5,11 +5,6 @@
 
 <script>
 
-export default {
-
-    name : 'Slide',
-    components :{},
-}
 
 </script>
 
