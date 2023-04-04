@@ -1,16 +1,25 @@
 
-import MenuPortfolio from '../components/menuPortfolio.vue';
+
 
 <template>
 
-    <MenuPortfolio>
+    <Carrousel>
 
-    </MenuPortfolio>
+    </Carrousel>
     
 </template>
 
 <script>
 
-import MenuPortfolio from '../components/MenuPortfolio.vue';
+import Carrousel from '../components/Carrousel.vue';
+
+  export default {
+    name: 'Carrousel',
+    components : {
+      Carrousel,
+    }
+}
+
+
 
 </script>

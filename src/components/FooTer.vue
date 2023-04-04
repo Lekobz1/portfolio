@@ -5,9 +5,8 @@
             <img class="imglogo" src="../assets/logo site.svg" alt="Logo Jonathan Simon">
         </div>
         <div class="cta">
-            <p class="calltoaction">
-                je souhaite realiser un projet !
-            </p>
+            <p class="calltoaction">je souhaite realiser un projet !</p>
+            <h2>ta mere</h2>
         </div>
         <div class="copie">
 
