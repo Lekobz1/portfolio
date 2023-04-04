@@ -3,20 +3,20 @@
 
 <template>
 
-    <Carrousel>
+    <MenuPortfolio>
 
-    </Carrousel>
+    </MenuPortfolio>
     
 </template>
 
 <script>
 
-import Carrousel from '../components/Carrousel.vue';
+import MenuPortfolio from '../components/MenuPortfolio.vue';
 
   export default {
-    name: 'Carrousel',
+    name: 'Portfolio',
     components : {
-      Carrousel,
+      MenuPortfolio,
     }
 }
 

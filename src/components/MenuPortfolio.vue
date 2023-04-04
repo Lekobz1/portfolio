@@ -21,7 +21,7 @@
 
 export default {
 
-    name : 'MenuPortefolio'
+    name : 'MenuPortfolio'
 }
 
 </script>
@@ -33,20 +33,6 @@ export default {
     height: 10rem;
     gap: 1rem;
 }
-
-.presentation > div {
-    flex: 1;
-    border-radius: 1rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto 100%;
-    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
-}
-
-.presentation > div:hover{
-    flex: 5;
-}
-
 .img{
     width: 500px;
     height: 500px;
