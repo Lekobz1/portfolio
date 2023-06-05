@@ -6,19 +6,19 @@
     <br /><br />
     <form action="" method="" class="formulaire">
       <div class="nom">
-        <input type="text" id="input" placeholder="entrez votre nom" aria-required="true" />
+        <input type="text" id="input" placeholder="Entrez votre nom" aria-required="true" />
       </div>
       <br>
       <div class="prenom">
-        <input type="text" id="input" placeholder="entrez votre prenom" aria-required="true" />
+        <input type="text" id="input" placeholder="Entrez votre prenom" aria-required="true" />
       </div>
       <br>
       <div class="tel">
-        <input type="tel" id="input" placeholder="entrez votre numéro" aria-required="true" />
+        <input type="tel" id="input" placeholder="Entrez votre numéro" aria-required="true" />
       </div>
       <br>
       <div class="mail">
-        <input type="email" id="input" placeholder="entrez votre mail" aria-required="true" />
+        <input type="email" id="input" placeholder="Entrez votre mail" aria-required="true" />
       </div>
       <br>
       <div class="projet">
@@ -44,7 +44,7 @@
       <div class="detail" v-if="selectedProject === 'Photo'">
           <label class="txt" for="choixQ1">Quel est votre projet photo ?</label>
           <br><br>
-          <select id="choixQ2">
+          <select id="choix">
             <option>vehicule</option>
             <option>Immobilier</option>
             <option>Portrait</option>
@@ -55,7 +55,7 @@
       <div  class="detail" v-if="selectedProject === 'Video'">
           <label class="txt" for="choixQ2">Quel est votre projet video?</label>
           <br><br>
-          <select  id="choixQ2">
+          <select  id="choix">
             <option>Immobiler</option>
             <option>Sport</option>
             <option>Vehicule</option>
@@ -65,7 +65,7 @@
       <div v-if="selectedProject === 'Developpement web'" class="detail">
           <label class="txt" for="choixQ3">Quel est votre projet web ?</label>
           <br><br>
-          <select id="choixQ1">
+          <select id="choix">
             <option>Site vitrine</option>
             <option>Site e commerce</option>
             <option>Blog</option>
@@ -76,7 +76,7 @@
       <div v-if="selectedProject === 'Marketing digital'" class="detail">
           <label class="txt" for="choixQ3">Quel accompagnement souhaitez-vous ?</label>
           <br><br>
-          <select id="choixQ1">
+          <select id="choix">
             <option>Community management</option>
             <option>Data scientist</option>
             <option>Strategie digital</option>
@@ -94,7 +94,7 @@
           rows="10"
           cols="50"
           minlength="50"
-          maxlength="250"
+          maxlength="500"
           placeholder="Entrez vos précisions ici"
         ></textarea>
       </div>
@@ -121,8 +121,11 @@ export default {
 h1 {
   font-size: xx-large;
   text-align: center;
-  border: 2px solid black;
-  border-radius: 10px;
+  border-top: 1px solid black;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid black;
+  padding: 2%;
 }
 
 
@@ -142,7 +145,7 @@ h1 {
   margin-bottom: 2%;
   margin-right: 2%;
   float: right;
-  background-color: rgba(229, 186, 115);
+  background-color: rgba(229, 185, 115);
   
 }
 
@@ -151,28 +154,31 @@ h1 {
   text-transform: uppercase
 }
 
-.check{
-  display: flex;
-  flex-direction: row;
-}
 
 #input{
-  border: 2px solid black;
+  border-top: none;
+  border-left: 1px solid black;
+  border-right: none;
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 20%;
   width: 90%;
   padding: 5px;
   justify-content: center;
-}
-
-#input:hover{
-  background-color: orangered;
+  background-color: rgba(229, 186, 115);
 }
 
 .valider{
-
+  background-color: rgba(229, 186, 115);
 }
 
-.valider:hover{
-  background-color: brown;
+
+#choix{
+  background-color: rgba(229, 186, 115);
+  border-top: none;
+  border-left: 1px solid black;
+  border-right: none;
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 20%;
 }
 
 
