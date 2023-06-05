@@ -1,47 +1,46 @@
 <template>
+
   <div class="form">
+    <div>
     <h1>Formulaire de contact</h1>
     <br /><br />
     <form action="" method="" class="formulaire">
       <div class="nom">
-        <label class="txt" for="nom">Nom : </label>
-        <br><br>
-        <input type="text" id="nom" placeholder="Nom" aria-required="true" />
+        <input type="text" id="input" placeholder="entrez votre nom" aria-required="true" />
       </div>
+      <br>
       <div class="prenom">
-        <label class="txt" for="prenom">Prenom :</label>
-        <br><br>
-        <input type="text" id="prenom" placeholder="Prénom" />
+        <input type="text" id="input" placeholder="entrez votre prenom" aria-required="true" />
       </div>
+      <br>
       <div class="tel">
-        <label class="txt" for="tel">Téléphone : </label>
-        <br><br>
-        <input type="tel" id="tel" placeholder="0609088909" />
+        <input type="tel" id="input" placeholder="entrez votre numéro" aria-required="true" />
       </div>
+      <br>
       <div class="mail">
-        <label class="txt" for="email"> Adresse email :</label>
-        <br><br>
-        <input type="email" id="email" placeholder="exemple@mail.fr" />
+        <input type="email" id="input" placeholder="entrez votre mail" aria-required="true" />
       </div>
+      <br>
       <div class="projet">
         <label class="txt" for="choixQ1">Pour quel projet me contactez-vous ?</label>
         <div>
-          <input type="radio" id="photo" name="choixQ1"  value="Photo" v-model="selectedProject"/>
+          <input type="radio" id="checkbox" name="choixQ1"  value="Photo" v-model="selectedProject"/>
           <label for="photo">Photo</label>
         </div>
         <div>
-          <input type="radio" id="video" name="choixQ2" value="Video" v-model="selectedProject" />
+          <input type="radio" id="checkbox" name="choixQ2" value="Video" v-model="selectedProject" />
           <label for="video">Vidéo</label>
         </div>
         <div>
-          <input type="radio" id="devWeb" name="choixQ3" value="Developpement web" v-model="selectedProject" />
+          <input type="radio" id="checkbox" name="choixQ3" value="Developpement web" v-model="selectedProject" />
           <label for="devWeb">Développement web</label>
         </div>
         <div>
-          <input type="radio" id="devWeb" name="choixQ4" value="Marketing digital" v-model="selectedProject" />
+          <input type="radio" id="checkbox" name="choixQ4" value="Marketing digital" v-model="selectedProject" />
           <label for="devWeb">Marketing digital</label>
         </div>
       </div>
+      
       <div class="detail" v-if="selectedProject === 'Photo'">
           <label class="txt" for="choixQ1">Quel est votre projet photo ?</label>
           <br><br>
@@ -52,6 +51,7 @@
             <option>clip</option>
           </select>
       </div>
+      
       <div  class="detail" v-if="selectedProject === 'Video'">
           <label class="txt" for="choixQ2">Quel est votre projet video?</label>
           <br><br>
@@ -61,6 +61,7 @@
             <option>Vehicule</option>
           </select>
       </div>
+      
       <div v-if="selectedProject === 'Developpement web'" class="detail">
           <label class="txt" for="choixQ3">Quel est votre projet web ?</label>
           <br><br>
@@ -71,6 +72,7 @@
             <option>Autre(precisez dans les commentaires)</option>
           </select>
       </div>
+      
       <div v-if="selectedProject === 'Marketing digital'" class="detail">
           <label class="txt" for="choixQ3">Quel accompagnement souhaitez-vous ?</label>
           <br><br>
@@ -82,20 +84,26 @@
             <option>Autre(precisez dans les commentaires)</option>
           </select>
       </div>
+      <br>
       <div class="commentaire">
         <label class="txt" for="story">donner moi plus de précision sur le projet</label>
         <br><br>
         <textarea
           id="story"
           name="story"
+          rows="10"
+          cols="50"
           minlength="50"
           maxlength="250"
-          placeholder="Entrez vos demandes ici"
+          placeholder="Entrez vos précisions ici"
         ></textarea>
       </div>
+      <br><br>
       <button class="valider" type="submit">Envoyer</button>
     </form>
   </div>
+  </div>
+
 </template>
 
 <script>
@@ -117,6 +125,8 @@ h1 {
   border-radius: 10px;
 }
 
+
+
 .form {
   padding: 5%;
   display: block;
@@ -125,11 +135,15 @@ h1 {
   max-width: 40%;
   min-width: 40%;
   height: 80%;
-  /* box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); */
-  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
   background-color: whitesmoke;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  float: right;
+  background-color: rgba(229, 186, 115);
+  
 }
 
 .txt{
@@ -142,14 +156,23 @@ h1 {
   flex-direction: row;
 }
 
-input{
-  background-color: red;
+#input{
+  border: 2px solid black;
+  width: 90%;
+  padding: 5px;
+  justify-content: center;
 }
+
+#input:hover{
+  background-color: orangered;
+}
+
 .valider{
-  background-color: aqua;
+
 }
+
 .valider:hover{
-  background-color: red;
+  background-color: brown;
 }
 
 
