@@ -4,6 +4,10 @@
       <h1> {{ specialty.title }} </h1>
       <button  @click="toggleSpecialty(index)">{{ specialty.isOpen ? 'Fermer cette prestation' : 'Afficher la prestations' }}</button>
       <div v-if="specialty.isOpen">
+        <img src="../assets/bateau.jpg" alt="bateau">
+        <img src="../assets/devcar.jpg" alt="devcar">
+        <img src="../assets/photocar.jpg" alt="devcar">
+        <img src="../assets/videocar.jpg" alt="devcar">
         <p>{{ specialty.text }}</p>
         
         <div v-if="specialty.showContact">
@@ -24,19 +28,25 @@ export default {
       specialities: [
         {
           title: "développement web",
-          text: "Texte de la spécialité 1",
+          text: "Tu veux un site pour vendre des chevres naine ?",
           showContact: false,
           showPortfolio: false,
         },
         {
-          title: "Spécialité 2",
-          text: "Texte de la spécialité 2",
+          title: "Photographie",
+          text: " viens faire des photos de tes plus beau paté de campagne",
           showContact: false,
           showPortfolio: false,
         },
         {
-          title: "Spécialité 3",
-          text: "Texte de la spécialité 3",
+          title: "Video et film",
+          text: "No porn only drone",
+          showContact: false,
+          showPortfolio: false,
+        },
+        {
+          title: "Marketing Digital",
+          text: "viens je t'aide à vendre. Spécialiste Only fans",
           showContact: false,
           showPortfolio: false,
         },

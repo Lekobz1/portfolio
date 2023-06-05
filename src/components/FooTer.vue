@@ -6,12 +6,7 @@
         </div>
         <div class="cta">
             <p class="calltoaction">je souhaite realiser un projet !</p>
-            <h2>ta mere</h2>
         </div>
-        <div class="copie">
-
-        </div>
-    
 </footer>
 
 </template>
