@@ -167,6 +167,7 @@ h1 {
   padding: 5px;
   justify-content: center;
   background-color: rgba(229, 186, 115);
+  outline: none;
 }
 
 .valider{
@@ -181,10 +182,18 @@ h1 {
   border-right: none;
   border-bottom: 1px solid black;
   border-bottom-left-radius: 20%;
+  outline: none;
 }
 
 .police{
   font-size: larger;
+}
+
+#story{
+  outline: none;
+  background-color: rgba(229, 186, 115);
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
 
