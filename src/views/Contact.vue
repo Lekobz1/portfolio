@@ -1,5 +1,5 @@
 <template>
-  <div class="testicule">
+  <div class="principale_div">
     <div class="form">
       <div>
         <h1>Formulaire de contact</h1>
@@ -125,7 +125,7 @@ h1 {
 }
 
 
-.testicule {
+.principale_div {
   margin: 2%;
   display: flex;
   justify-content: center;
