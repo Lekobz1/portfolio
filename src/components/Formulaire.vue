@@ -23,22 +23,25 @@
       <br>
       <div class="projet">
         <label class="txt" for="choixQ1">Pour quel projet me contactez-vous ?</label>
+        
         <div>
+          <br>
           <input type="radio" id="checkbox" name="choixQ1"  value="Photo" v-model="selectedProject"/>
-          <label for="photo">Photo</label>
+          <label class="police" for="photo">Photo</label>
         </div>
         <div>
           <input type="radio" id="checkbox" name="choixQ2" value="Video" v-model="selectedProject" />
-          <label for="video">Vidéo</label>
+          <label class="police" for="video">Vidéo</label>
         </div>
         <div>
           <input type="radio" id="checkbox" name="choixQ3" value="Developpement web" v-model="selectedProject" />
-          <label for="devWeb">Développement web</label>
+          <label class="police" for="devWeb">Développement web</label>
         </div>
         <div>
           <input type="radio" id="checkbox" name="choixQ4" value="Marketing digital" v-model="selectedProject" />
-          <label for="devWeb">Marketing digital</label>
+          <label class="police" for="devWeb">Marketing digital</label>
         </div>
+        <br>
       </div>
       
       <div class="detail" v-if="selectedProject === 'Photo'">
@@ -86,7 +89,7 @@
       </div>
       <br>
       <div class="commentaire">
-        <label class="txt" for="story">donner moi plus de précision sur le projet</label>
+        <label class="txt" for="story">donnez moi plus de précision sur le projet</label>
         <br><br>
         <textarea
           id="story"
@@ -157,10 +160,9 @@ h1 {
 
 #input{
   border-top: none;
-  border-left: 1px solid black;
+  border-left: none;
   border-right: none;
   border-bottom: 1px solid black;
-  border-bottom-left-radius: 20%;
   width: 90%;
   padding: 5px;
   justify-content: center;
@@ -179,6 +181,10 @@ h1 {
   border-right: none;
   border-bottom: 1px solid black;
   border-bottom-left-radius: 20%;
+}
+
+.police{
+  font-size: larger;
 }
 
 
