@@ -1,24 +1,29 @@
 <template>
   <div class="principale_div">
+    
     <div class="form">
       <div>
         <h1>Formulaire de contact</h1>
         <br /><br />
-        <form action="" method="" class="formulaire">
+        <form action="" method="" class="formulaire" @submit.prevent="submitForm">
           <div class="nom">
-            <input type="text" id="input" placeholder="Entrez votre nom" aria-required="true" />
+            <input type="text" id="input" placeholder="Entrez votre nom" v-model.trim="nom" required />
+            <div v-if="errors.nom" class="error">{{ errors.nom }}</div>
           </div>
           <br>
           <div class="prenom">
-            <input type="text" id="input" placeholder="Entrez votre prenom" aria-required="true" />
+            <input type="text" id="input" placeholder="Entrez votre prenom" v-model.trim="prenom" required />
+            <div v-if="errors.prenom" class="error">{{ errors.prenom }}</div>
           </div>
           <br>
           <div class="tel">
-            <input type="tel" id="input" placeholder="Entrez votre numéro" aria-required="true" />
+            <input type="tel" id="input" placeholder="Entrez votre numéro" v-model.trim="tel" required />
+            <div v-if="errors.tel" class="error">{{ errors.tel }}</div>
           </div>
           <br>
           <div class="mail">
-            <input type="email" id="input" placeholder="Entrez votre mail" aria-required="true" />
+            <input type="email" id="input" placeholder="Entrez votre mail" v-model.trim="email" required />
+            <div v-if="errors.email" class="error">{{ errors.email }}</div>
           </div>
           <br>
           <div class="projet">
@@ -92,7 +97,8 @@
             <label class="txt" for="story">donnez moi plus de précision sur le projet</label>
             <br><br>
             <textarea id="story" name="story" rows="10" cols="50" minlength="50" maxlength="500"
-              placeholder="Entrez vos précisions ici"></textarea>
+              placeholder="Entrez vos précisions ici" v-model.trim="message" required></textarea>
+              <div v-if="errors.message" class="error">{{ errors.message }}</div>
           </div>
           <br><br>
           <button class="valider" type="submit">Envoyer</button>
@@ -108,8 +114,44 @@ export default {
   data() {
     return {
       selectedProject: '',
-    }
+      nom: '',
+      prenom: '',
+      email: '',
+      tel: '',
+      message: '',
+      errors: {}
+    };
   },
+  methods: {
+    submitForm() {
+      this.errors = {};
+
+      if (!this.nom || !this.nom.trim()) {
+        this.errors.nom = 'Veuillez entrer votre nom.';
+      }
+      if (!this.prenom || !this.prenom.trim()) {
+        this.errors.prenom = 'Veuillez entrer votre prénom.';
+      }
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(this.email)) {
+        this.errors.email = 'Veuillez entrer une adresse email valide.';
+      }
+
+      const phoneRegex = /^\d{10}$/;
+      if (!phoneRegex.test(this.tel)) {
+        this.errors.tel = 'Veuillez entrer un numéro de téléphone valide (10 chiffres).';
+      }
+
+      if (!this.message || !this.message.trim()) {
+        this.errors.message = 'Veuillez entrer votre message.';
+      }
+
+      if (Object.keys(this.errors).length === 0) {
+        // Effectuer l'action souhaitée avec les données du formulaire
+        console.log('Formulaire soumis !');
+      }
+    }
+  }
 };
 </script>
 
@@ -135,7 +177,9 @@ h1 {
   background-color: transparent;
   box-sizing: border-box;
   border-radius: 20px;
+  background-color: azure;
 }
+
 .form {
   padding: 5%;
   margin: auto;

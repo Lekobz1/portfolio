@@ -46,7 +46,7 @@ export default {
         },
         {
           title: "Marketing Digital",
-          text: "viens je t'aide à vendre. Spécialiste Only fans",
+          text: "viens je t'aide à vendre. Spécialiste thug",
           showContact: false,
           showPortfolio: false,
         },
